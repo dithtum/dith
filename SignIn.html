@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+    font-size: 15pt;
+    background-color:345eda;
+}
+form{
+  position: relative;
+  top:30px;
+  left:50px;
+  background-color:#038bad;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+ height: 400px;
+ width:220px;
+ align-items: center;
+ border-radius: 4%;
+}
+input{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom:black solid 2px;
+}
+label{
+  color:black;
+}
+#pass , #cpass{
+  border-style: none;
+  background-color: blue;
+  border-radius:5px;
+  color:#ead;
+  font-weight:bold;
+  margin-left:45%;
+}
+#submit{
+  border:none;
+  height:30px;
+  width:100%;
+  padding-top:10px;
+  padding-bottom: 10px;
+  font-weight:bolder;
+  border-radius:5px;
+  background-color:#05566b;
+}
+
+  
+  </style>
+  
+</head>
+
+<body>
+  <form>
+  <label>First Name
+    <br><input type="text" id="fn" placeholder="first name" id= "input" onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='white'"/>
+  </label><br>
+  <label>
+    Second Name<br><input type="text" id="sn" placeholder="second name" id="input" onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='white'"/>
+  </label><br>
+  <label>
+    Phone Number<br><input type="tel" id="pn" placeholder="phone number" id="input" onfocus="this.style.backgroundColor='yellow'" onblur="this. style.backgroundColor='white'"/>
+  </label><br>
+  <label>
+    Email<br><input type="email" id="em" placeholder="@example.com" id="input" onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='white'"/></label><br>
+<label>
+  Password<br><input type="password" id="pa" placeholder="password" id="one"
+onfocus="this.style.backgroundColor='yellow'"
+onblur="this.style.backgroundColor='white'"/>
+</label><br>
+<button id="pass">SHOW</button><br>
+<label>
+  Confirm Password<br><input type="password" id="cpa" placeholder="confirm password" id="two" onfocus="this.style.backgroundColor='yellow'" onblur="this.style.backgroundColor='white'"/>
+</label><br>
+<button id="cpass">SHOW</button><br>
+<button id="submit">SUBMIT</button>
+</form>
+  <!-- Project -->
+  <script>
+  let bt=document.querySelector("#submit")
+bt.onclick=()=>{
+ let a=document.querySelector("#fn")
+ let b=a.value
+ if(b===""){
+   alert("input first name")
+ }
+ let w=document.querySelector("#sn")
+ let s=w.value
+ if(s===""){
+   alert("input second name")
+ }
+ let r=document.querySelector("#pn")
+ let t=r.value
+ if(t===""){
+  alert("input phone number")
+ }
+ let o=document.querySelector("#em")
+ let u=o.value
+ if(u===""){
+   alert("input email")
+ }
+ let i=document.querySelector("#pa")
+ let x=i.value
+ if(x===""){
+   alert("input password")
+ }
+ let v=document.querySelector("#cpa")
+ let z=v.value
+ if(z===""){
+ alert("input verification password");
+}
+if(x!==z){
+  alert("your password don't match")
+}
+if(x.length<8){
+  alert("characters less than 8")
+}
+if(v.length<8){
+  alert ("characters less than 8")
+}
+}
+let pass=document.querySelector("#pass")
+pass.onclick=()=>{
+  let i=document.querySelector("#pa")
+  i.type="text"
+}
+let h=document.querySelector("#cpa")
+h.onclick=()=>{
+  let s=document.querySelector("#cpa")
+  s.type="text"
+}
+
+
+
+
+
+
+  </script>
+</body>
+</html>
